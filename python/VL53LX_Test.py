@@ -25,13 +25,13 @@
 import time
 import VL53LX
 
-# Create a VL53L0X object
-tof = VL53LX.VL53L0X(i2c_bus=1,i2c_address=0x29)
+# Create a VL53LX object
+tof = VL53LX.VL53LX(i2c_bus=1,i2c_address=0x29)
 # I2C Address can change before tof.open()
 # tof.change_address(0x32)
 tof.open()
 # Start ranging
-tof.start_ranging(VL53L0X.Vl53l0xAccuracyMode.BETTER)
+tof.start_ranging(VL53LX.VL53LXAccuracyMode.GOOD)
 
 timing = tof.get_timing()
 if timing < 20000:

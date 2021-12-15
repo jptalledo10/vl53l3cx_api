@@ -36,11 +36,11 @@ SOFTWARE.
 
 
 // calls read_i2c_block_data(address, reg, length)
-static int (*i2c_read_func)(uint8_t address, uint8_t reg,
+static int (*i2c_read_func)(uint8_t address, uint16_t reg,
                     uint8_t *list, uint8_t length) = NULL;
 
 // calls write_i2c_block_data(address, reg, list)
-static int (*i2c_write_func)(uint8_t address, uint8_t reg,
+static int (*i2c_write_func)(uint8_t address, uint16_t reg,
                     uint8_t *list, uint8_t length) = NULL;
 
 //static pthread_mutex_t i2c_mutex = PTHREAD_MUTEX_INITIALIZER; 

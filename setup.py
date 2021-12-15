@@ -27,6 +27,7 @@ extension = Extension(
              'Api/core/src/vl53lx_wait.c',
              'Api/core/src/vl53lx_xtalk.c',
              'platform/src/vl53lx_platform.c',
+             'platform/src/vl53lx_platform_ipp.c',
              'python_lib/vl53l0x_python.c'])
 
 setup(name='VL53LX',

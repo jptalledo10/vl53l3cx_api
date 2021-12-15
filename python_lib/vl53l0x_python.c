@@ -113,7 +113,7 @@ VL53LX_Dev_t *initialise(uint8_t i2c_address)
     VL53LX_DeviceInfo_t                DeviceInfo;
     int32_t status_int;
 
-    printf("JPTV Library \n");
+    printf("JPT Embedded Solutions LLC  Library \n");
     printf ("VL53L0X Start Ranging Address 0x%02X\n\n", i2c_address);
 
     VL53LX_Dev_t *dev = (VL53LX_Dev_t *)malloc(sizeof(VL53LX_Dev_t));
@@ -162,7 +162,9 @@ VL53LX_Dev_t *initialise(uint8_t i2c_address)
                 }
                 // End of implementation specific
 
+		Status = VL53LX_WaitDeviceBooted(dev);
                 Status = VL53LX_DataInit(dev); // Data initialization
+		Status = VL53LX_ERROR_NONE;
                 if(Status == VL53LX_ERROR_NONE)
                 {
                     Status = VL53LX_GetDeviceInfo(dev, &DeviceInfo);

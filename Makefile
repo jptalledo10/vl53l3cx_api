@@ -47,7 +47,8 @@ LIB_SRCS = \
 	vl53lx_wait.c \
 	vl53lx_xtalk.c \
         vl53lx_platform.c \
-    vl53l0x_python.c
+        vl53lx_platform_ipp.c \
+     vl53l0x_python.c
 
 
 LIB_OBJS  = $(LIB_SRCS:%.c=$(OBJ_DIR)/%.o)
